@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Khanh Luong Tien, 123, LIC=VGXG8-330WC-VEQHA-1QM0M-1AVNY-SCDV2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\AD\OneDrive - Hanoi University of Science and Technology\Documents\STM\SX1278_Node\MDK-ARM\SX1278_Node.uvprojx
+Project File Date:  01/20/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'SX1278_Node'
+../Core/Src/main.c(98): warning: passing 'uint8_t[10]' (aka 'unsigned char[10]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        strcat(DataOut, string);
+               ^~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(93): note: passing argument to parameter here
+extern _ARMABI char *strcat(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+                                                    ^
+../Core/Src/main.c(99): warning: passing 'uint8_t[10]' (aka 'unsigned char[10]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        LoRa_transmit(&myLoRa, DataOut, strlen(DataOut), 10);
+                                               ^~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+2 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=18464 RO-data=484 RW-data=16 ZI-data=3456  
+FromELF: creating hex file...
+"SX1278_Node\SX1278_Node.axf" - 0 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM.CMSIS.6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_SX1278_Node
+  C:/Users/AD/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/AD/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:6.0.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"sx1278_node\startup_stm32f103xb.o"
+"sx1278_node\main.o"
+"sx1278_node\stm32f1xx_it.o"
+"sx1278_node\stm32f1xx_hal_msp.o"
+"sx1278_node\stm32f1xx_hal_gpio_ex.o"
+"sx1278_node\stm32f1xx_hal_spi.o"
+"sx1278_node\stm32f1xx_hal.o"
+"sx1278_node\stm32f1xx_hal_rcc.o"
+"sx1278_node\stm32f1xx_hal_rcc_ex.o"
+"sx1278_node\stm32f1xx_hal_gpio.o"
+"sx1278_node\stm32f1xx_hal_dma.o"
+"sx1278_node\stm32f1xx_hal_cortex.o"
+"sx1278_node\stm32f1xx_hal_pwr.o"
+"sx1278_node\stm32f1xx_hal_flash.o"
+"sx1278_node\stm32f1xx_hal_flash_ex.o"
+"sx1278_node\stm32f1xx_hal_exti.o"
+"sx1278_node\stm32f1xx_hal_tim.o"
+"sx1278_node\stm32f1xx_hal_tim_ex.o"
+"sx1278_node\system_stm32f1xx.o"
+"sx1278_node\lora.o"
+"sx1278_node\ds18b20driver.o"
+--strict --scatter "SX1278_Node\SX1278_Node.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SX1278_Node.map" -o SX1278_Node\SX1278_Node.axf
